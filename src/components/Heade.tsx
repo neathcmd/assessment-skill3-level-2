@@ -30,18 +30,20 @@ const Header = () => {
         <div className="w-full flex items-center justify-center">
           <h1 className="text-2xl text-blue-700 font-bold">BlogZone</h1>
         </div>
-        <ul className="flex items-center justify-center space-y-2 px-4 text-black">
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <a
-                href={link.href}
-                className="block px-2 py-1 hover:text-gray-400"
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center justify-center">
+          <ul className="flex space-y-2 px-4 text-black">
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  className="block px-2 py-1 hover:text-gray-400"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </header>
   );
